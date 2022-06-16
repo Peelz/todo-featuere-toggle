@@ -4,7 +4,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-southeast1-docker.pkg.dev/tdg-dh-truehealth-core-nonprod/cossack-docker/poc-go-todo-service",
+        "{{.image}}:{{.tag}}",
         ".",
       ]
 options:
