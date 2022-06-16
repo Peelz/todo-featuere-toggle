@@ -13,4 +13,5 @@ fi
 prefixArtifactName="${artifactRegion}/${gcpProjectName}/${repository}/${artifactName}"
 
 gcloud builds submit \
+    --suppress-logs \
     --tag "${prefixArtifactName}:${tag}"
