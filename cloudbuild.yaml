@@ -1,0 +1,11 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "asia-southeast1-docker.pkg.dev/tdg-dh-truehealth-core-nonprod/cossack-docker/poc-go-todo-service",
+        ".",
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -12,6 +12,8 @@ if [[ ! -z "$GO_PIPELINE_LABEL" ]]; then
 fi
 prefixArtifactName="${artifactRegion}/${gcpProjectName}/${repository}/${artifactName}"
 
+cat deployment/cloudbuild.yaml
+
 gcloud builds submit \
-    --suppress-logs \
-    --tag "${prefixArtifactName}:${tag}"
+    --config=build
+    --suppress-logs 
