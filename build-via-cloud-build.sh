@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "building $GO_PIPELINE_LABEL"
+
 artifactRegion="asia-southeast1-docker.pkg.dev"
 gcpProjectName="tdg-dh-truehealth-core-nonprod"
 repository="cossack-docker"
