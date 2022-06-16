@@ -13,7 +13,7 @@ fi
 imageName="${artifactRegion}/${gcpProjectName}/${repository}/${artifactName}"
 
 cat deployment/cloudbuild.yaml |
-    sed s/{{.tag}}/${tag}/g |
-    sed s/{{.image}}/${imageName}/g >cloudbuild.yaml
+    sed "s/{{.tag}}/${tag}/g" |
+    sed "s/{{.image}}/${imageName}/g" >cloudbuild.yaml
 
 gcloud builds submit
