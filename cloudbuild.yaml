@@ -1,0 +1,11 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "asia-southeast1-docker.pkg.dev/tdg-dh-truehealth-core-nonprod/infra-starfish-docker/todo-service",
+        ".",
+      ]
+options:
+  logging: GCS_ONLY
